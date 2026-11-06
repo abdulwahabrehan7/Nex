@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A practical IT support knowledge hub covering Windows, networking, VPN, Microsoft 365, Active Directory and PC hardware troubleshooting." />
+  <title>IT Desk — Support Knowledge Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink:'#17211f', muted:'#65736e', paper:'#f6f8f5', mint:'#dff3e9', forest:'#176b52', line:'#e5ebe6' }, boxShadow:{soft:'0 18px 50px rgba(24,48,39,.08)'} } } };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-paper text-ink">
+  <header class="sticky top-0 z-40 border-b border-line bg-white/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+      <a href="#" class="flex items-center gap-3">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-forest text-white font-bold">nS</span>
+        <span><span class="block font-extrabold tracking-tight">NexSupport</span><span class="block text-xs text-muted">Practical support knowledge hub</span></span>
+      </a>
+      <nav class="hidden items-center gap-7 text-sm font-semibold text-slate-600 md:flex">
+        <a href="#guides" class="nav-link">Guides</a><a href="#diagnostics" class="nav-link">Diagnostics</a><a href="#hardware" class="nav-link">Hardware</a><a href="#ticket" class="nav-link">Ticket notes</a>
+      </nav>
+      <button id="menuBtn" class="rounded-xl border border-line px-3 py-2 text-sm md:hidden" aria-label="Open menu">Menu</button>
+    </div>
+    <div id="mobileMenu" class="hidden border-t border-line bg-white px-5 py-3 md:hidden">
+      <div class="flex flex-col gap-3 text-sm font-semibold"><a href="#guides">Guides</a><a href="#diagnostics">Diagnostics</a><a href="#hardware">Hardware</a><a href="#ticket">Ticket notes</a></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-wrap">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 md:grid-cols-[1.05fr_.95fr] md:py-24">
+        <div>
+          <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-white px-3 py-1.5 text-xs font-bold text-forest"><span class="h-2 w-2 rounded-full bg-emerald-500"></span> FIELD-READY IT SUPPORT PLAYBOOK</div>
+          <h1 class="max-w-2xl text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">Solve the issue.<br><span class="text-forest">Restore the workflow.</span></h1>
+          <p class="mt-6 max-w-xl text-base leading-7 text-muted sm:text-lg">A clear, practical guide to everyday service desk work — from Windows and network faults to Microsoft 365, user access and PC hardware.</p>
+          <div class="mt-8 flex flex-wrap gap-3"><a href="#guides" class="rounded-xl bg-forest px-5 py-3 text-sm font-bold text-white shadow-soft hover:bg-emerald-900">Explore troubleshooting</a><a href="#diagnostics" class="rounded-xl border border-line bg-white px-5 py-3 text-sm font-bold hover:border-forest">Run quick checks</a></div>
+          <div class="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-line pt-6">
+            <div><div class="text-2xl font-extrabold">06</div><div class="mt-1 text-xs text-muted">Core topics</div></div>
+            <div><div class="text-2xl font-extrabold">20+</div><div class="mt-1 text-xs text-muted">Practical checks</div></div>
+            <div><div class="text-2xl font-extrabold">01</div><div class="mt-1 text-xs text-muted">Simple workflow</div></div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="absolute -inset-4 rounded-[2rem] bg-emerald-100/70 blur-2xl"></div>
+          <div class="relative overflow-hidden rounded-[2rem] border border-white bg-white p-3 shadow-soft">
+            <img class="h-[300px] w-full rounded-[1.5rem] object-cover sm:h-[390px]" src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1200&q=85" alt="IT technician working on computer hardware">
+            <div class="absolute bottom-7 left-7 right-7 rounded-2xl border border-white/70 bg-white/90 p-5 backdrop-blur">
+              <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-forest">Support mindset</span><span class="rounded-full bg-mint px-2.5 py-1 text-xs font-bold text-forest">Best practice</span></div>
+              <p class="mt-2 text-lg font-bold">Identify → Isolate → Resolve → Verify → Document</p>
+              <p class="mt-1 text-sm text-muted">A repeatable approach for every support request.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-5 py-14">
+      <div class="mb-7 flex flex-wrap items-end justify-between gap-4"><div><p class="eyebrow">START HERE</p><h2 class="section-title">The support workflow</h2></div><p class="max-w-md text-sm leading-6 text-muted">Use the same disciplined process for incidents, service requests and recurring issues.</p></div>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div class="step-card"><span>01</span><h3>Understand</h3><p>Ask what changed, who is affected and when it started.</p></div>
+        <div class="step-card"><span>02</span><h3>Check scope</h3><p>One user, one device, one location or multiple users?</p></div>
+        <div class="step-card"><span>03</span><h3>Isolate</h3><p>Test the simplest likely cause before changing settings.</p></div>
+        <div class="step-card"><span>04</span><h3>Resolve & verify</h3><p>Apply an approved fix and confirm the user can work.</p></div>
+        <div class="step-card"><span>05</span><h3>Document</h3><p>Record symptoms, checks, fix, result and next action.</p></div>
+      </div>
+    </section>
+
+    <section id="guides" class="bg-white py-16">
+      <div class="mx-auto max-w-7xl px-5">
+        <div class="flex flex-wrap items-end justify-between gap-5">
+          <div><p class="eyebrow">KNOWLEDGE BASE</p><h2 class="section-title">Troubleshooting guides</h2><p class="mt-2 text-sm text-muted">Short, actionable runbooks for common service desk incidents.</p></div>
+          <div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+            <input id="searchInput" class="search-input" type="search" placeholder="Search an issue..." aria-label="Search guides">
+            <select id="categoryFilter" class="search-input sm:w-44" aria-label="Filter by category"><option value="all">All categories</option><option value="windows">Windows</option><option value="network">Network & VPN</option><option value="m365">Microsoft 365</option><option value="access">Accounts & access</option><option value="hardware">Hardware</option></select>
+          </div>
+        </div>
+        <div id="guideGrid" class="mt-9 grid gap-5 md:grid-cols-2 xl:grid-cols-3"></div>
+        <p id="emptyState" class="hidden py-12 text-center text-sm text-muted">No guides match your search. Try another keyword.</p>
+      </div>
+    </section>
+
+    <section id="diagnostics" class="mx-auto max-w-7xl px-5 py-16">
+      <div class="mb-8"><p class="eyebrow">QUICK TOOLS</p><h2 class="section-title">Basic diagnostics</h2><p class="mt-2 max-w-2xl text-sm leading-6 text-muted">These browser-based checks provide useful starting information. They do not replace endpoint tools, packet capture or your organisation's monitoring platform.</p></div>
+      <div class="grid gap-5 lg:grid-cols-3">
+        <div class="tool-card">
+          <div class="tool-icon">◎</div><h3>Connection overview</h3><p>Check whether the browser reports an online connection and view connection hints when supported.</p>
+          <div class="mt-5 rounded-xl bg-paper p-4"><div class="flex justify-between text-sm"><span class="text-muted">Browser status</span><strong id="onlineStatus">Checking…</strong></div><div class="mt-3 flex justify-between text-sm"><span class="text-muted">Connection type</span><strong id="connectionType">Not exposed</strong></div><div class="mt-3 flex justify-between text-sm"><span class="text-muted">Effective type</span><strong id="effectiveType">Not exposed</strong></div></div>
+          <button id="refreshConnection" class="tool-button mt-4">Refresh status</button>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">⌁</div><h3>Public IP lookup</h3><p>Retrieve the public IP address visible to an external service. This is not your device's private LAN address.</p>
+          <div class="mt-5 rounded-xl bg-paper p-4"><span class="text-xs font-semibold uppercase tracking-wider text-muted">Public IP address</span><div id="ipResult" class="mt-2 break-all text-xl font-extrabold">Not checked</div><p id="ipNote" class="mt-2 text-xs text-muted">Uses the ipify public API.</p></div>
+          <button id="checkIP" class="tool-button mt-4">Check public IP</button>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">⌕</div><h3>DNS lookup</h3><p>Query DNS-over-HTTPS for an A record. A successful response confirms the resolver returned an answer.</p>
+          <div class="mt-4 flex gap-2"><input id="dnsDomain" class="search-input min-w-0 flex-1" value="example.com" placeholder="example.com" aria-label="Domain name"></div>
+          <div class="mt-3 min-h-20 rounded-xl bg-paper p-4"><div id="dnsResult" class="break-all text-sm text-muted">Enter a domain and run a lookup.</div></div>
+          <button id="checkDNS" class="tool-button mt-4">Run DNS lookup</button>
+        </div>
+      </div>
+      <div class="mt-5 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-900"><strong>Privacy & security:</strong> The public IP and DNS buttons send the entered request to third-party public services (ipify and Cloudflare DNS). Do not enter internal hostnames, confidential domains or sensitive data. The tools do not scan networks or change device settings.</div>
+    </section>
+
+    <section id="hardware" class="bg-[#edf4ef] py-16">
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 md:grid-cols-2">
+        <div class="overflow-hidden rounded-[1.7rem] shadow-soft"><img class="h-[330px] w-full object-cover" src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1100&q=85" alt="Desktop PC components and motherboard"></div>
+        <div><p class="eyebrow">HARDWARE & WORKSTATIONS</p><h2 class="section-title">Think beyond the error message.</h2><p class="mt-4 text-sm leading-7 text-muted">For desktop and workstation issues, start with observable symptoms and safe physical checks. Follow company ESD, warranty and change-control procedures before opening equipment.</p>
+          <div class="mt-6 space-y-3">
+            <details class="accordion" open><summary>PC does not power on</summary><p>Confirm wall power, power cable, PSU switch and dock/power adapter. Check for LEDs or fan activity. If there is no response, isolate the outlet and adapter where safe. Escalate suspected PSU or board faults.</p></details>
+            <details class="accordion"><summary>Overheating or loud fans</summary><p>Check airflow, blocked vents, dust build-up and fan operation. Review temperatures using an approved monitoring utility. Avoid stress tests on unstable or overheating systems; clean only under approved procedures.</p></details>
+            <details class="accordion"><summary>Display or peripheral issue</summary><p>Check monitor power/input, cable seating, dock connection and alternate port. Test a known-good cable or monitor, then review display settings and device drivers.</p></details>
+            <details class="accordion"><summary>After hardware upgrade</summary><p>Verify component compatibility, seating, power connectors, BIOS recognition and device drivers. Run an appropriate diagnostic and document the part/model and test outcome.</p></details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ticket" class="mx-auto max-w-7xl px-5 py-16">
+      <div class="grid gap-10 lg:grid-cols-[.8fr_1.2fr]">
+        <div><p class="eyebrow">SERVICE DESK PRACTICE</p><h2 class="section-title">Write better ticket notes.</h2><p class="mt-3 text-sm leading-7 text-muted">Clear notes help the next technician understand what happened without repeating the same checks. Use this template for practice or adapt it to your organisation's ITSM process.</p>
+          <div class="mt-6 rounded-2xl bg-ink p-6 text-white"><p class="text-xs font-bold uppercase tracking-wider text-emerald-300">Good ticket habits</p><ul class="mt-4 space-y-3 text-sm text-slate-200"><li>• Record exact error messages where possible.</li><li>• Include device name, user impact and time observed.</li><li>• Never include passwords or authentication codes.</li><li>• Record actions and results, not assumptions.</li></ul></div>
+        </div>
+        <div class="rounded-3xl border border-line bg-white p-6 shadow-soft">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="field-label">Issue title<input id="ticketTitle" class="form-input" placeholder="e.g. Outlook not syncing"></label>
+            <label class="field-label">Category<select id="ticketCategory" class="form-input"><option>Windows</option><option>Network / VPN</option><option>Microsoft 365</option><option>Account / Access</option><option>Hardware</option><option>Other</option></select></label>
+            <label class="field-label sm:col-span-2">User impact<input id="ticketImpact" class="form-input" placeholder="Who is affected and what work is blocked?"></label>
+            <label class="field-label sm:col-span-2">Troubleshooting performed<textarea id="ticketSteps" class="form-input min-h-24" placeholder="List checks performed and their results..."></textarea></label>
+            <label class="field-label sm:col-span-2">Resolution / next action<textarea id="ticketResolution" class="form-input min-h-20" placeholder="What fixed it, or what needs to happen next?"></textarea></label>
+          </div>
+          <div class="mt-5 flex flex-wrap gap-3"><button id="generateTicket" class="rounded-xl bg-forest px-5 py-3 text-sm font-bold text-white hover:bg-emerald-900">Generate notes</button><button id="copyTicket" class="rounded-xl border border-line px-5 py-3 text-sm font-bold hover:border-forest">Copy notes</button></div>
+          <pre id="ticketOutput" class="mt-5 hidden whitespace-pre-wrap rounded-xl bg-paper p-4 text-xs leading-6 text-slate-700"></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16">
+      <div class="mx-auto max-w-7xl px-5">
+        <div class="mb-8"><p class="eyebrow">KNOWLEDGE CHECK</p><h2 class="section-title">Test your troubleshooting approach.</h2></div>
+        <div class="grid gap-6 lg:grid-cols-[1fr_280px]">
+          <div class="rounded-3xl border border-line p-6 sm:p-8">
+            <div class="flex items-center justify-between"><span class="text-xs font-bold uppercase tracking-wider text-forest">Quick scenario</span><span id="quizProgress" class="text-xs text-muted">Question 1 of 4</span></div>
+            <h3 id="quizQuestion" class="mt-5 text-xl font-extrabold"></h3><div id="quizOptions" class="mt-5 grid gap-3"></div><p id="quizFeedback" class="mt-4 text-sm font-semibold" aria-live="polite"></p><button id="nextQuestion" class="mt-5 rounded-xl bg-forest px-5 py-3 text-sm font-bold text-white disabled:opacity-40" disabled>Next question</button>
+          </div>
+          <div class="rounded-3xl bg-mint p-6"><div class="text-xs font-bold uppercase tracking-wider text-forest">Your progress</div><div id="quizScore" class="mt-3 text-4xl font-extrabold">0 / 4</div><p class="mt-2 text-sm leading-6 text-slate-600">Choose the safest, most structured next step. You can restart the quiz after the final question.</p><button id="restartQuiz" class="mt-6 rounded-xl border border-emerald-200 bg-white px-4 py-2.5 text-sm font-bold text-forest">Restart quiz</button></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-line bg-white">
+    <div class="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between"><div><strong class="text-ink">IT Desk</strong> · A practical learning project</div><div>Built with HTML, Tailwind CSS and JavaScript · Verify procedures against your organisation's policies.</div></div>
+  </footer>
+  <!-- Troubleshooting Guide Popup -->
+<div id="guideModal"
+     class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-950/60 p-3 backdrop-blur-sm sm:p-6">
+
+  <div id="modalContent"
+       class="relative flex flex-col w-full max-w-3xl max-h-[90vh] overflow-hidden rounded-3xl bg-white shadow-2xl">
+
+    <!-- Fixed Header -->
+    <div class="shrink-0 flex items-center justify-between border-b border-gray-100 bg-white px-5 py-4">
+      <div class="min-w-0">
+        <span id="modalCategory"
+              class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">
+          Category
+        </span>
+        <h2 id="modalTitle" class="mt-2 text-lg font-extrabold sm:text-xl">
+          Guide title
+        </h2>
+        <p id="modalTime" class="mt-1 text-xs text-gray-500"></p>
+      </div>
+
+      <button id="closeGuide"
+              class="ml-3 shrink-0 rounded-xl bg-gray-100 px-3 py-2 text-xl">
+        &times;
+      </button>
+    </div>
+
+    <!-- Scrollable Body -->
+    <div class="min-h-0 flex-1 overflow-y-auto overscroll-contain">
+
+      <!-- Image -->
+      <div class="h-36 sm:h-48">
+        <img id="modalImage"
+             src=""
+             alt="Troubleshooting"
+             class="h-full w-full object-cover">
+      </div>
+
+      <!-- Guide Content -->
+      <div class="p-5 sm:p-7">
+
+        <p id="modalDescription"
+           class="mb-6 text-sm leading-7 text-gray-600"></p>
+
+        <h3 class="mb-5 text-lg font-extrabold text-gray-900">
+          Step-by-step troubleshooting
+        </h3>
+
+        <div id="modalSteps" class="space-y-4"></div>
+
+        <div class="mt-7 rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+          <div class="font-bold text-emerald-800">💡 IT Support Tip</div>
+          <p id="modalTip"
+             class="mt-2 text-sm leading-6 text-emerald-900"></p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Fixed Footer -->
+    <div class="shrink-0 flex justify-between gap-3 border-t border-gray-100 bg-gray-50 px-5 py-4">
+      <button id="printGuide"
+              class="rounded-xl border bg-white px-4 py-3 text-sm font-bold">
+        Print Guide
+      </button>
+
+      <button id="doneGuide"
+              class="rounded-xl bg-emerald-700 px-6 py-3 text-sm font-bold text-white">
+        Done
+      </button>
+    </div>
+
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
